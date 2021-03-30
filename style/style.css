@@ -1,6 +1,14 @@
+body,html{
+  background-color: rgb(49, 49, 49);
+}
 
- #containertot {
-   background-color: black;
+#titolo {width: 100%;}
+.titolo1{text-align: center; color: rgb(160, 5, 5);}
+
+.card {width: 17rem; background-color: rgb(142, 142, 143); margin-top: 5%;}
+
+
+ .row{
+   margin-top: 5%;
  }
-
  
