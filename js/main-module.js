@@ -10,8 +10,7 @@
             .then (res => {
                 if(res) return res.json();
             })
-            .then (resjson => {
-                console.log(resjson);
+            .then (resjson => {                
                 resjson.Search.forEach(stampa);
             })
             .catch(err => {
