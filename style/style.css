@@ -7,55 +7,98 @@ body, html {
 
 .container-fluid {
   width: 100%;
-  margin-top: 3rem;
+  margin-top: 1rem;
   background: rgb(0,0,0);
   background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(106,43,43,1) 50%, rgba(0,0,0,1) 100%);
+  text-align: center;
 }
 
 .title{
-  text-align: center;
-  color: rgb(0, 0, 0);
+  
+  color: rgb(255, 255, 255);
   letter-spacing: 10px;
   font-family: 'Krona One', sans-serif;
+  padding-bottom: 0rem;
 }
 
 .card-img-top{
   width: 16rem;
   height: 22rem;
+  transition: 0.5s;
 }
 
 .card{
   width: 16rem;
   float: left;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   color: white;
   background: rgb(0,0,0);
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 73%, rgba(106,43,43,0) 100%);
   border: 0px solid rgba(0,0,0,.125);
+  border-radius: 0.2rem;
+  transition: 0.3s;
 }
+
+.card:hover{
+  transform: scale(1.05);
+  
+}
+
+
 
 #mainContainer {
   margin-left: auto;
   margin-right: auto; 
-  justify-content: center;
+  
 }
 
 .col{
-  margin: 4rem;
-  width: 16rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 17.5rem;
 }
 
-#cont {
-  margin-left: auto;
-  margin-right: auto;
+#mainContainer {
+  justify-content: center;
+  
 }
 
 .card-title{
   font-family: 'Varela Round', sans-serif;
+  font-size:98%;
 
 }
 
 .card-text{
   font-family: 'Varela Round', sans-serif;
+  font-size: 90%;
 
+}
+
+.navbar {padding-top: 0%;}
+
+.subtitle {
+  width: 100%;
+  text-align: center;
+  margin : 1rem 0rem 3rem 0rem;
+}
+
+.subtitle1{
+  color: white;
+  font-family: 'Krona One', sans-serif;
+  font-size: 140%;
+}
+
+.btn-outline-success{
+  color: white;
+  border-color: transparent;
+}
+.btn-outline-success:hover{
+  background-color:  transparent ;
+  border-color: white;
+}
+
+.btn{
+  transition: 0.5s;
+  font-size: 90%;
 }
