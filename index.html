@@ -25,24 +25,12 @@
 
 <body>
 
-  <script type="module">
-    import { film } from "./js/main-module.js";
-    window.cercafilm = film;
-
-  </script>
-
-  <script>
-    window.onload = function () {
-      window.cercafilm();
-    }
-  </script>
-
   <nav class="navbar navbar-light">
     <div class="container-fluid">
       <h1 class="title"> Movie </h1>
       <form class="d-flex">
-        <input type="search" id="myInput" placeholder="Find Movie" aria-label="Search" onsearch="search()">
-        <button class="btn btn-outline-success">Search</button>
+        <input type="search" id="myInput" placeholder="Find Movie" aria-label="Search">
+        <button class="btn btn-outline-success" type="button" onclick="searchFilm()">Search</button>
 
 
       </form>
@@ -59,6 +47,19 @@
   </div>
 
   <div id="mainContainer2" class="row row-cols-4"></div>
+
+  <script type="module">
+    import { film, searchFilm } from "./js/main-module.js";
+    window.cercafilm = film;
+    window.searchFilm = searchFilm;
+
+  </script>
+
+  <script>
+    window.onload = function () {
+      window.cercafilm();
+    }
+  </script>
 
 </body>
 

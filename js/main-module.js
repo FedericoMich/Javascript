@@ -1,3 +1,24 @@
+export const searchFilm = () => {
+
+    const movie = document.getElementById("myInput").value;
+
+    const promise = fetch('https://www.omdbapi.com/?&apikey=d99eb7c1&s=' + movie);
+
+    promise
+
+        .then(res => { if (res) return res.json(); })
+
+        .then(resjson => {
+            for (let i = 0; i < resjson.Search.length; i++) {
+                console.log(resjson.Search[i]);
+            }
+        })
+
+        .catch(err => { console.error(err); })
+
+}
+
+
 export const film = () => {
     const promise = fetch(
         'https://www.omdbapi.com/?&apikey=d99eb7c1&s=Fast+Furious'
