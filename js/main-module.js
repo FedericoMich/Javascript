@@ -26,7 +26,7 @@ const createFilm = (item) => {
     const card_text_genere = document.createElement("p");
     const container = document.getElementById('mainContainer');
     makeCard(MAINdiv, divCard, poster, card_title, card_text_anno, card_text_genere);
-    addContent(item, poster, card_title, card_text_anno, card_text_genere);
+    addContent(item, divCard, poster, card_title, card_text_anno, card_text_genere);
     //inserisco le parti della card nel divcard e la div card nel MAINdiv 
     divCard.innerHTML += poster.outerHTML + card_title.outerHTML + card_text_anno.outerHTML + card_text_genere.outerHTML
     MAINdiv.appendChild(divCard);
@@ -44,7 +44,8 @@ const makeCard = (div, card, poster, title, year, genre) => {
     genre.setAttribute("class", "card-text");
 }
 
-const addContent = (item, poster, title, year, genre) => {
+const addContent = (item, card, poster, title, year, genre) => {
+    card.setAttribute("id", item.imdbID);
     //controllo se il poster e' presente, altrimenti inserisco un immagine 
     if (item.Poster == "N/A") {
         poster.setAttribute("src", ("img/not-found.jpg"));
